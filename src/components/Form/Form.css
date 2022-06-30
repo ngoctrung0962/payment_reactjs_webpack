@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.payment__container{
+    background-image: url(./img/payment3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    object-fit: contain;
+    position: relative;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1024px;
+    margin: 0 auto;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    height: 517px;
+    max-height: 520px;
+}
+
+
+.form__group{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 300px;
+    width: 300px;
+}
+
+.payment__label{
+    font-size: 1.5rem;
+    align-items: center;
+
+}
+
+.payment__tiltle{
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+   padding-top: 2.5rem;
+    padding-left: 40%;
+}
+
+.form__btn{
+    position: relative;
+    display: inline-block;
+    padding: 1.15rem 2.75rem;
+    border-radius: 3rem;
+    transition: .3s;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 700;
+    margin-left: 45%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.form__btn:hover{
+    background-color: hsl(207, 57%, 57%);
+}
+
+.payment__img{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: 40px;
+    bottom: 10px;
+}
