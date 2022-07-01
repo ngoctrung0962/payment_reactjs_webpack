@@ -14,7 +14,7 @@ import $ from 'jquery'
 import { sha256 } from 'js-sha256'
 import './Form.css'
 import orderApi from '../../api/orderApi';
-
+import payment_icon from '../../assets/img/payment_icon.png'
 
 export default function Form() {
     const [name, setName] = useState("");
@@ -105,7 +105,6 @@ export default function Form() {
             try {
                 const res = await orderApi.get(id_app, api_code, _Id, token);
                 setData(res)
-                console.log(res)
                 window.scrollTo(0, 0)
             } catch (error) {
                 console.log(error)
@@ -113,7 +112,6 @@ export default function Form() {
         };
         fetchData();
     }, [])
-    console.log(data)
 
 
     //auto sumit form
@@ -124,7 +122,7 @@ export default function Form() {
             await setEmail(data.email)
             await setAmount(data.t_tt)
             await setDes(data.ten_pt_thanh_toan)
-            formRef.current.click(handleSubmit);
+           formRef.current.click(handleSubmit);
         };
         fetchData();
 
@@ -134,7 +132,7 @@ export default function Form() {
 
     return (
         <div className='payment__container'>
-            <img className='payment__img' src={require('./img/payment_icon.png')} />
+            <img className='payment__img' src={require('../../assets/img/payment_icon.png')} />
             <h1 className='payment__tiltle'>FORM PAYMENT</h1>
             <form className='container' id='megapayForm' name='megapayForm' method='POST' action='submit' onSubmit={() => handleSubmit}>
                 <div className='form__group'>
@@ -268,7 +266,7 @@ export default function Form() {
                 <input type="hidden" name="merTrxId" defaultValue={merTrxId} />
                 <input type="hidden" name="merchantToken" value={merchantToken} />
                 <input type="hidden" name="invoiceNo" value={invoiceNo} />
-                <input style={{ display: 'none' }} type="text" name="callBackUrl" defaultValue="http://localhost:3000/result" />
+                <input style={{ display: 'none' }} type="text" name="callBackUrl" defaultValue={'http://127.0.0.1:3000/result' }/>
                 <input style={{ display: 'none' }} type="text" name="notiUrl" defaultValue="https://" />
                 <input style={{ display: 'none' }} type="text" name="reqDomain" defaultValue="https://localhost" />
                 <input type="hidden" name="userId" maxLength="50" value="trung"></input>
