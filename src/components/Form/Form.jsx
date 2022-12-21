@@ -124,7 +124,7 @@ export default function Form() {
             await setEmail(data.email)
             await setAmount(data.t_tt)
             await setDes(data.ten_pt_thanh_toan)
-            formRef.current.click(handleSubmit);
+            //formRef.current.click(handleSubmit);
         };
         fetchData();
 
