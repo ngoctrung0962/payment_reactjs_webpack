@@ -7,13 +7,14 @@
 }
 
 .payment__container{
-    background-image: url(./img/payment3.png);
+    background-image: url('../../assets/img/payment3.png');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 1;
     object-fit: contain;
     position: relative;
 }
+
 .container{
     display: flex;
     justify-content: center;
@@ -74,4 +75,5 @@
     height: 250px;
     right: 40px;
     bottom: 10px;
+
 }
